@@ -49,5 +49,14 @@ namespace SwedishFramework.Tests
 
             Assert.IsFalse(false);
         }
+
+        [TestMethod()]
+        public void GetAnswerTest_Lagom()
+        {
+            if (new SwedishBoolean(SwedishBoolean.Status.Lagom).GetAnswer())
+                Assert.IsTrue(true);
+            else
+                Assert.IsFalse(false);
+        }
     }
 }

@@ -10,7 +10,8 @@ namespace SwedishFramework
             Sant,
             Falskt,
             Ibland,
-            Kanske
+            Kanske,
+            Lagom
         }
         
         private Status _status;
@@ -40,6 +41,12 @@ namespace SwedishFramework
                         return true;
                     else
                         return false;
+                case Status.Lagom:
+                    if (new Random().Next(1, 100) >= 50)
+                        return true;
+                    else
+                        return false;
+
             }
             throw new InvalidEnumArgumentException();
         }
